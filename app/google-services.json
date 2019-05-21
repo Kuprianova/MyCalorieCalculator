@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "280511995219",
+    "firebase_url": "https://calculator-5bfd3.firebaseio.com",
+    "project_id": "calculator-5bfd3",
+    "storage_bucket": "calculator-5bfd3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:280511995219:android:ef1397270e58e479",
+        "android_client_info": {
+          "package_name": "com.example.xxx_alena_1337_xxx.mycaloriecalculator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "280511995219-l2j2unnggrtq687ti6mc65itfoqp369p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDuDtXeJRsAK1Lbwr7NyLXj5l_-gZP5iQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "280511995219-l2j2unnggrtq687ti6mc65itfoqp369p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
