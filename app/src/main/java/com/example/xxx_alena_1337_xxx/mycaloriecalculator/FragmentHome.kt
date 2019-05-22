@@ -86,7 +86,7 @@ class NormalCaloriesItem(val user: User): Item<ViewHolder>(){
         val index: Float
         val hieght: Float = user.heightUser!!.toFloat()
         val wieght: Float = user.weightUser!!.toFloat()
-        val old: String = user.old!!
+        val old: String = user.bornAt!!
         //val mydata: String
 
         val format = SimpleDateFormat()
