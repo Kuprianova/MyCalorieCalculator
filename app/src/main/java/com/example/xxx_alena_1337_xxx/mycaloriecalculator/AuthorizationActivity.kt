@@ -1,13 +1,13 @@
 package com.example.xxx_alena_1337_xxx.mycaloriecalculator
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.UserInfo
 import kotlinx.android.synthetic.main.activity_authorization.*
-import kotlinx.android.synthetic.main.activity_registration.*
 
 class AuthorizationActivity : AppCompatActivity() {
 
@@ -15,10 +15,8 @@ class AuthorizationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_authorization)
 
-        button_authorization.setOnClickListener(){
+        button_authorization.setOnClickListener {
             performLogin()
-
-
         }
 
         text_back.setOnClickListener(){
@@ -40,7 +38,9 @@ class AuthorizationActivity : AppCompatActivity() {
                 .addOnCompleteListener {
                     if (!it.isSuccessful) return@addOnCompleteListener
 
-                    Log.d("Login", "Successfully logged in: ${it.result!!.user.uid}")
+                    val uid = it.result!!.user.uid
+
+                    Log.d("Login", "Successfully logged in: $uid")
 
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)

@@ -20,17 +20,18 @@ class RegistrationActivity : Activity() {
 
     private lateinit var auth: FirebaseAuth
 
-
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-
         auth = FirebaseAuth.getInstance()
 
+        if (auth.uid != null) {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
 
         setContentView(R.layout.activity_registration)
-
 
         next_button_registrtion.setOnClickListener() {
 
@@ -44,8 +45,6 @@ class RegistrationActivity : Activity() {
             }
 
         }
-
-
 
         textAuthorization.setOnClickListener() {
             val intent = Intent(this, AuthorizationActivity::class.java)
@@ -62,8 +61,6 @@ class RegistrationActivity : Activity() {
         val old = editText_birthday_reg.text.toString()
         val weight = editText_weight_reg.text.toString()
         val height = editText_height_reg.text.toString()
-
-
 
         if (email.isEmpty() || password.isEmpty() || name.isEmpty() || old.isEmpty() || sex == "" || weight.isEmpty() || height.isEmpty()) {
             Toast.makeText(this, "Пожалуйста заполните все поля", Toast.LENGTH_SHORT).show()
