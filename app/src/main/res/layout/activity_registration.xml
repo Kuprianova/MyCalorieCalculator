@@ -65,7 +65,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner_lifestyle" />
+        app:layout_constraintTop_toBottomOf="@+id/editText_birthday_reg" />
 
     <TextView
         android:id="@+id/textAuthorization"
@@ -90,29 +90,24 @@
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal">
 
-        <LinearLayout
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:id="@+id/radioButton_male"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            android:text="Мужской" />
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:id="@+id/radioButton_female"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <android.support.v7.widget.AppCompatRadioButton
-                android:id="@+id/radioButton_male"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="0dp"
-                android:layout_weight="1"
-                android:text="Мужской" />
-
-            <android.support.v7.widget.AppCompatRadioButton
-                android:id="@+id/radioButton_female"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="Женский" />
-        </LinearLayout>
+            android:text="Женский" />
 
     </RadioGroup>
 
@@ -148,19 +143,6 @@
         app:layout_constraintStart_toStartOf="@+id/editText_height_reg"
         app:layout_constraintTop_toBottomOf="@+id/editText_height_reg" />
 
-    <Spinner
-        android:id="@+id/spinner_lifestyle"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:background="@drawable/rounded_edittext"
-        app:layout_constraintEnd_toEndOf="@+id/editText_birthday_reg"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editText_birthday_reg"
-        app:layout_constraintTop_toBottomOf="@+id/editText_birthday_reg" />
-
 
     <EditText
         android:id="@+id/editText_birthday_reg"
@@ -172,6 +154,7 @@
         android:background="@drawable/rounded_edittext"
         android:ems="10"
         android:inputType="date"
+        android:hint="дд.мм.гггг"
         app:layout_constraintEnd_toEndOf="@+id/editText_weight_reg"
         app:layout_constraintStart_toStartOf="@+id/editText_weight_reg"
         app:layout_constraintTop_toBottomOf="@+id/editText_weight_reg" />
