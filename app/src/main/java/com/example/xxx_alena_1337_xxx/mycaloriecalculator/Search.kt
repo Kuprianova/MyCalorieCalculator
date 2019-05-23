@@ -59,11 +59,12 @@ object Search {
                                 .child("/products_list")
 
                             val productItem = item as ProductItem
+                            val idProduct = FirebaseAuth.getInstance().uid ?: ""
                             val name = productItem.product.product_name
                             val grams = 100.toString()
                             val calories = productItem.product.calories
 
-                            val productsList = ProductsList(name, grams, calories)
+                            val productsList = ProductsList(idProduct,name, grams, calories)
                             userProducts.push().setValue(productsList)
                         }
 
@@ -77,7 +78,6 @@ object Search {
                 })
             }
         })
-
 
     }
 }

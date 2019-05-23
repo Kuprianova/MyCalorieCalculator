@@ -27,33 +27,23 @@
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_list_product"
-        android:layout_width="match_parent"
-        android:layout_height="598dp"
+        android:layout_width="421dp"
+        android:layout_height="546dp"
         android:layout_alignTop="@+id/searchText"
         android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/textView_sum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/searchText"
         tools:context=".fragment.RecyclerViewSampleFragment"
         tools:listitem="@layout/products_list" />
 
-    <Button
-        android:id="@+id/button_sum"
-        android:layout_width="294dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Расчитать"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recycler_list_product" />
-
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_search"
-        android:layout_width="match_parent"
-        android:layout_height="638dp"
+        android:layout_width="397dp"
+        android:layout_height="525dp"
         android:layout_marginHorizontal="8dp"
         android:layout_marginTop="16dp"
         android:background="@color/cardview_light_background"
@@ -62,6 +52,66 @@
         tools:context=".fragment.RecyclerViewSampleFragment"
         tools:layout_editor_absoluteX="8dp"
         tools:listitem="@layout/layout_list" />
+
+    <ImageView
+        android:id="@+id/imageView_remove"
+        android:layout_width="63dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="44dp"
+        android:src="@drawable/ic_delete_black_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.904"
+        app:layout_constraintStart_toEndOf="@+id/textView_sum"
+        app:layout_constraintTop_toBottomOf="@+id/recycler_list_product"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="98dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="60dp"
+        android:gravity="center"
+        android:text="Сумма"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView_sum"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recycler_list_product" />
+
+    <TextView
+        android:id="@+id/textView_sum"
+        android:layout_width="119dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginBottom="63dp"
+        android:gravity="center"
+        android:text="0"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/recycler_list_product" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="80dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="64dp"
+        android:text="Ккал/100 гр"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView_remove"
+        app:layout_constraintStart_toEndOf="@+id/textView_sum"
+        app:layout_constraintTop_toBottomOf="@+id/recycler_list_product" />
     <!--app:layoutManager="android.support.v7.widget.LinearLayoutManager" -->
 
 
