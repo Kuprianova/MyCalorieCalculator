@@ -57,22 +57,24 @@ class FragmentHome : Fragment() {
 
 //    private fun caloriesNormal() {
 //
-//        val user = new User
+//        var user = User()
 //        val index: Float
 //        val uid = FirebaseAuth.getInstance().uid
 //        val ref = FirebaseDatabase.getInstance().getReference("/users/$uid")
 //
 //        ref.child("/old").onChange { data ->
-//            user.bornAt = data.value?.toString()
+//            user.bornAt = data.value?.toString()!!
 //        }
 //
 //        ref.child("/heightUser").onChange { data ->
-//            user.heightUser = data.value?.toString()
+//            user.heightUser = data.value?.toString()!!
 //        }
 //
 //        ref.child("/weightUser").onChange { data ->
-//            user.weightUser = data.value?.toString()
+//            user.weightUser = data.value?.toString()!!
 //        }
+//
+//
 //
 //        val format = SimpleDateFormat()
 //        format.applyPattern("dd.MM.yyyy")
@@ -97,7 +99,7 @@ class FragmentHome : Fragment() {
 //            index = (447.6 + (9.2+user.hieghtUser)+(3.1+user.wieghtUser)-(4.3*years)).toFloat()
 //            textView_aloriesNorm.text=index.toString()
 //        }
-
+//
 //    }
 
 }

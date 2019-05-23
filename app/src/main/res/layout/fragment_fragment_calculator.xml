@@ -27,8 +27,8 @@
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_list_product"
-        android:layout_width="421dp"
-        android:layout_height="546dp"
+        android:layout_width="419dp"
+        android:layout_height="418dp"
         android:layout_alignTop="@+id/searchText"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
@@ -64,10 +64,10 @@
         android:src="@drawable/ic_delete_black_24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.904"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/textView_sum"
         app:layout_constraintTop_toBottomOf="@+id/recycler_list_product"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.351" />
 
     <TextView
         android:id="@+id/textView2"
