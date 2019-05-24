@@ -33,16 +33,6 @@ class FragmentCalculator : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        imageView_remove.setOnClickListener {
-            val user = FirebaseAuth.getInstance().currentUser
-            val uid = user!!.uid
-
-            val userProducts = FirebaseDatabase.getInstance()
-                .getReference("/users/$uid")
-                .child("/products_list")
-
-            userProducts.removeValue()
-        }
 
         sumProducts()
 
@@ -91,6 +81,17 @@ class FragmentCalculator : Fragment() {
                 TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
             }
         })
+
+        imageView_remove.setOnClickListener {
+            val user = FirebaseAuth.getInstance().currentUser
+            val uid = user!!.uid
+
+            val userProducts = FirebaseDatabase.getInstance()
+                .getReference("/users/$uid")
+                .child("/products_list")
+
+            userProducts.removeValue()
+        }
     }
 }
 

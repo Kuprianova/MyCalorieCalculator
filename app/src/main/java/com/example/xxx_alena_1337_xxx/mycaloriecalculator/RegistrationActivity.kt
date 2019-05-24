@@ -35,10 +35,13 @@ class RegistrationActivity : Activity() {
 
         next_button_registrtion.setOnClickListener() {
 
+
+
             val radioGroup = findViewById<RadioGroup>(R.id.radioGroupSex)
             radioGroup?.setOnCheckedChangeListener { group, isChecked ->
+                var sex = "female"
                 //var text = "You selected: "
-                var sex = if (R.id.radioButton_male == isChecked) "male" else "female"
+                sex = if (R.id.radioButton_male == isChecked) "male" else "female"
                 //text += if (R.id.radioButton_male == isChecked) "male" else "female"
                 //Toast.makeText(applicationContext, text, Toast.LENGTH_SHORT).show()
                 performRegister(sex)
